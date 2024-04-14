@@ -16,9 +16,22 @@
     <h1>Dom Dom Dom Dom Dom Dom Dom</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
     <script>
-        window.document.write(window.document.URL)
+
+
+        var d = window.document.querySelector("div#msg")
+
+        d.style.color ="blue"
+        /*var corpo = window.document.body //Guarda na variavel corpo o <body>.
+        var p1 = window.document.getElementsByTagName("p")[0] //Guarda na variaver p1, o primeiro parágrafo.
+        var d = window.document.getElementById("msg")
+        corpo.style.background = "black"
+        p1.style.color = "blue"
+    
+        document.write(p1.innerText) //Pega o texto sem a formatação, ex strong, em etc.
+        document.write(p1.innerHTML) //Pega tudo o que está dentro do <p>.
+        window.document.write(window.document.URL) //Captura a URL da página.*/
     </script>
 </body>
 </html>
