@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <!--BLOCO-->
+    <p>Este exemplo mostra o método <strong>getElementById</strong></p>
+    <p>Hello World!</p>
+    <p id="demo1"></p>
+    <script>
+        var x = document.getElementsByTagName("p");
+        document.getElementById("demo1").innerHTML = "O quinto parágrafo (index 1) é: " + x[1].innerHTML;
+    </script>
+     <!--BLOCO--><hr/>
+        <p>Este exemplo encontra o elemento com o id ="main" e depois encontra todos os elementos "p" dentro de #main</p>
+    <div id="main">
+        <p>O DOM é muito util.</p>
+    </div>
+    <p id="demo2"></p>
+    <script>
+        var x = document.getElementById("main")
+        var y = x.getElementsByTagName("p")
+        document.getElementById("demo2").innerHTML = "O primeiro parágrafo dentro de #main é:  " + x[0].innerHTML;
+    </script>
+
+</body>
+</html>

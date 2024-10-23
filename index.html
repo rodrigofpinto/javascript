@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script>
+		function funcao1() {
+			document.getElementById("demo1").innerHTML = "Parágrafo mudado.";
+		}
+	</script>
+</head>
+
+<body>
+	<!--Bloco-->
+	<p id="demo1">Parágrafo.</p>
+	<button type="button" onclick="funcao1()">Clique</button>
+	<!--Bloco-->
+	<h2>JavaScript no body</h2>
+	<p id="demo2">Outro parágrafo.</p>
+	<button type="button" onclick="funcao2()">Clique</button>
+	<script>
+		function funcao2() {
+			document.getElementById("demo2").innerHTML = " Outro parágrafo mudado.";
+		}
+	</script>
+	<!--Bloco-->
+	<h2>JavaScript externo</h2>
+	<p id="demo3">Mais um parágrafo.</p>
+	<button type="button" onclick="funcao3()">Clique</button>
+	<p>(funcao3 está no ficheiro meuScript.js)</p>
+	<script src="meuScript.js"></script>
+	<!--Bloco-->
+	<p id="demo4"></p>
+	<script>
+		document.getElementById("demo4").innerHTML = 5 + 6;
+	</script>
+	<!--Bloco-->
+	<script>
+		document.write(7 + 6); 
+	</script>
+	<!--Bloco-->
+	<br /><br /> <!-- Quebra de linha para espaçamento -->
+	<button onclick="document.write(5 + 9)">document.write</button>
+	<br /><br />
+	<button onclick="window.alert(3 + 6)">window.alert</button>
+	<br /><br />
+	<button onclick="console.log(3 + 6)">console.log</button>
+	<!--Bloco-->
+	<p id="demo5"></p>
+	<script>
+		var x, y, z;
+		x = 5; y = 6; z = x + y;
+		document.getElementById("demo5").innerHTML = z;
+		// Comentário de uma linha 
+		/*
+		Comentário de várias linhas 
+		Comentário de várias linhas 
+		Comentário de várias linhas 
+		Comentário de várias linhas
+		*/
+	</script>
+	<!--Bloco-->
+	<script>
+		var legth = 16;
+		var tlm = "96679623";
+		var lastName = "Johnson";
+		var x = { firstName: "John", lastName: "Doe" }; 
+	</script>
+	<!--Bloco-->
+	<p id="demo6"></p>
+	<script>
+		var x = 16 + " Joaquim";
+		document.getElementById("demo6").innerHTML = x; 
+	</script>
+	<!--Bloco-->
+	<p id="demo7"></p>
+	<script>
+		var x = 10 + 5 + " Bernardo";
+		document.getElementById("demo7").innerHTML = x;
+	</script>
+	<!--Bloco-->
+	<p id="demo8"></p>
+	<script>
+		var x = "Bernardo " + 10 + 5;
+		document.getElementById("demo8").innerHTML = x;
+	</script>
+	<!--Bloco-->
+	<p id="demo9"></p>
+	<script>
+		var x;
+		x = 3;
+		x = "Joana";
+		document.getElementById("demo9").innerHTML = x; 
+	</script>
+	<!--Bloco-->
+	<p id="demo10"></p>
+	<script>
+		var aluno1 = "António Gonçalves";
+		var aluno2 = 'Maria Carrapatoso';
+		document.getElementById("demo10").innerHTML = aluno1 + "<br />" + aluno2; 
+	</script>
+	<!--Bloco-->
+	<p id="demo11"></p>
+	<script>
+		var frase1 = "It's fine";
+		var frase2 = "Chama-lhe 'Zeca'";
+		var frase3 = 'Ele é "esperto"';
+		document.getElementById("demo11").innerHTML = frase1 + "<br />" + frase2 + "<br />" + frase3; 
+	</script>
+	<!--Bloco-->
+	<p id="demo12"></p>
+	<script>
+		var x1 = 34.00;
+		var x2 = 34;
+		var x3 = 3.14;
+		document.getElementById("demo12").innerHTML = x1 + "<br />" + x2 + "<br />" + x3;
+	</script>
+	<!--Bloco-->
+	<p id="demo13"></p>
+	<script>
+		var y = 123e5;
+		var z = 123e-5;
+		document.getElementById("demo13").innerHTML = y + "<br />" + z;
+	</script>
+	<!--Bloco-->
+	<p id="demo14"></p>
+	<script>
+		var x = 5;
+		var y = 5;
+		var z = 6;
+		document.getElementById("demo14").innerHTML = (x == y) + "<br />" + (x == z); 
+	</script>
+	<!--Bloco-->
+	<p id="demo15"></p>
+	<script>
+		var alunos = ["Francisco", "Berta", "Josefa"];
+		document.getElementById("demo15").innerHTML = alunos[0]; 
+	</script>
+	<!--Bloco-->
+	<p id="demo16"></p>
+	<script>
+		var aluno = { nome: "Joaquim", apelido: "Barbosa", idade: 17 };
+		document.getElementById("demo16").innerHTML = "O " + aluno.nome + " " + aluno.apelido + " tem " + aluno.idade + " anos de idade."; 
+	</script>
+	<!--Bloco-->
+	<p id="demo17"></p>
+	<script>
+		var x = 5; // Número
+		document.getElementById("demo17").innerHTML = typeof x + "<br />" + typeof "Fernando"; // Exibe os tipos de dados de x e de uma string no parágrafo com id "demo17"
+	</script>
+	<!--Bloco-->
+	<p id="demo18"></p>
+	<script>
+		var veiculo;
+		document.getElementById("demo18").innerHTML = veiculo + "<br />" + typeof veiculo;
+	</script>
+	<!--Bloco-->
+	<p id="demo19"></p>
+	<script>
+		var veiculo = "Renault"
+		veiculo = undefined;
+		document.getElementById("demo19").innerHTML = veiculo + "<br />" + typeof veiculo;
+	</script>
+	<!--Bloco-->
+	<p id="demo20"></p>
+	<script>
+		var veiculo = "";
+		document.getElementById("demo20").innerHTML = "O valor é: " + veiculo + "<br />" + "O tipo é: " + typeof veiculo; 
+	</script>
+	<!--Bloco-->
+	<p id="demo21"></p>
+	<script>
+		var pessoa = { nome: "José", apelido: "Sá" };
+		document.getElementById("demo21").innerHTML = typeof pessoa; 
+	</script>
+	<!--Bloco-->
+	<p id="demo22"></p>
+	<script>
+		function funcao4(p1, p2) {
+			return p1 * p2;
+		}
+		document.getElementById("demo22").innerHTML = funcao4(4, 3); 
+	</script>
+	<!--Bloco-->
+	<p id="demo23"></p>
+	<script>
+		function funcao5(a, b) {
+			return a / b;
+		}
+		var x = funcao5(6, 2)
+		document.getElementById("demo23").innerHTML = x;
+	</script>
+	<!--Bloco-->
+	<p id="demo24"></p>
+	<script>
+		function toCelsius(fahrenheit) {
+			return (5 / 9) * (fahrenheit - 32);
+		}
+		document.getElementById("demo24").innerHTML = toCelsius(77); 
+	</script>
+	<!--Bloco-->
+	<p id="demo25"></p>
+	<script>
+		function toCelsius(f) {
+			return (5 / 9) * (f - 32);
+		}
+		document.getElementById("demo25").innerHTML = toCelsius + " " + toCelsius(77); 
+	</script>
+	<!--Bloco-->
+	<p id="demo26"></p>
+	<script>
+		function toCelsius(f) {
+			return (5 / 9) * (f - 32);
+		}
+		document.getElementById("demo25").innerHTML = "A temperatura é de " + toCelsius(77); 
+	</script>
+	<!--Bloco-->
+	<p id="demo27"></p>
+	<script>
+		var pessoa = {
+			nome: "Joao", apelido: "Carvalho", nomeCompleto: function () {
+				return this.nome + " " + this.apelido;
+			}
+		};
+		document.getElementById("demo27").innerHTML = pessoa.nomeCompleto();
+	</script>
+	<!--Bloco-->
+	<p id="demo28"></p>
+	<script>
+		var pessoa = {
+			nome: "Joao", apelido: "Carvalho", nomeCompleto: function () {
+				return this.nome + " " + this.apelido;
+			}
+		};
+		document.getElementById("demo28").innerHTML = pessoa.nomeCompleto();
+	</script>
+	<!--Bloco-->
+	<p id="demo29"></p>
+	<script>
+		function funcaoGlobal() {
+			carro = "Volvo";
+		}
+		document.getElementById("demo29").innerHTML = "Consigo aceder a " + carro;
+	</script>
+	<!--Bloco-->
+	<p id="demo30"></p>
+	<script>
+		var carro = "Renault";
+		document.getElementById("demo30").innerHTML = "Eu consigo aceder a " + window.carro;
+	</script>
+	<!--Bloco-->
+	<p id="demolet"></p>
+	<script>
+		var x = 10;
+		{
+			var x = 2;
+		}
+		document.getElementById("demolet").innerHTML = x;
+	</script>
+	<button onclick="document.getElementById('demo31').innerHTML = Date()"> Qual a data e hora? </button>
+	<p id="demo31"></p>
+	<button onclick="this.innerHTML = Date()"> Qual a data e hora? </button>
+
+	<button onclick="mostraData()"> Qual a data e hora? </button>
+	<script>
+		function mostraData() {
+			document.getElementById("demo32").innerHTML = Date();
+
+		}
+	</script>
+	<p id="demo32"></p>
+
+	<button onmouseover="document.getElementById('demo33').innerHTML = Date()"> Qual a data e hora? </button>
+	<p id="demo33"></p>
+	<button onmouseout="this.innerHTML = Date()"> Qual a data e hora? </button>
+
+	<p id="demo34"></p>
+	<script>
+		var texto = "A minha avó joga melhor do que a tua!";
+		document.getElementById("demo34").innerHTML = "O comprimento da string é de: " + texto.length + "caracteres";
+	</script>
+
+	<p id="demo35"></p>
+	<script>
+		var texto = "Descobrir onde está, pela primeira vez, a palavra 'onde'.";
+		var pos = texto.indexOf("onde");
+		document.getElementById("demo35").innerHTML = "A palavra 'onde' encontra-se pela primeira vez na posição: " + pos;
+	</script>
+
+	<p id="demo36"></p>
+	<script>
+		var texto = "Descobrir onde está, pela última vez, a palavra 'onde'.";
+		var pos = texto.lastIndexOf("onde");
+		document.getElementById("demo36").innerHTML = "A palavra 'onde', encontra-se pela última vez na posição: " + pos;
+	</script>
+
+	<p id="demo37"></p>
+	<script>
+		var texto = "Descobrir onde está, pela primeira vez, a palavra 'onde'.";
+		var pos = texto.indexOf("onde", 15);
+		document.getElementById("demo37").innerHTML = "A palavra 'onde', encontra-se pela primeira vez, depois da posição 15, na posição: " + pos;
+	</script>
+
+	<p id="demo38"></p>
+	<script>
+		var texto = "Onde está a palavra 'está'?";
+		var pos = texto.search("está");
+		document.getElementById("demo38").innerHTML = "A palavra 'está', encontra-se na posição: " + pos;
+	</script>
+
+	<p id="demo39"></p>
+	<script>
+		var texto = "Cabeça, tronco, membros";
+		var extrai = texto.slice(8, 14);
+		document.getElementById("demo39").innerHTML = "A palavra que está entre as posições 8 e 14 é: " + extrai;
+		// parametro negativo = trabalhar com o fim da string
+	</script>
+
+	<p id="demo40"></p>
+	<script>
+		var texto = "Cabeça, tronco, membros";
+		var extrai = texto.substring(8);
+		document.getElementById("demo40").innerHTML = "A palavra que está entre as posições 0 e 6 é: " + extrai;
+		// parametro negativo = trabalhar com o fim da string
+	</script>
+
+	<p id="demo41"></p>
+	<script>
+		var texto = "Um, dois, três";
+		var extrai = texto.substr(4, 4);
+		document.getElementById("demo41").innerHTML = "A palavra que se encontra na quarta posição e anda mais 4 posicoes é: " + extrai;
+		// verifica os caracteres que começam na quarta posicao e seguem mais 4 posicoes
+	</script>
+	<br />
+	<button onclick="funcao6()"> Substitui </button>
+	<p id="demo42"> Substitui uma palavra</p>
+	<script>
+
+		function funcao6() {
+			var texto = document.getElementById("demo42").innerHTML;
+			var subst = texto.replace("Substitui", "Substituída");
+			document.getElementById("demo42").innerHTML = subst;
+		}
+	</script>
+
+	<button onclick="funcao7()"> Maiúsculas </button>
+	<p id="demo43"> Converter para maiúsculas</p>
+	<script>
+		function funcao7() {
+			var texto = document.getElementById("demo43").innerHTML;
+			document.getElementById("demo43").innerHTML = texto.toUpperCase();
+		}
+	</script>
+
+	<button onclick="funcao8()"> Minúsculas </button>
+	<p id="demo44"> CONVERTER PARA MINÚSCULAS </p>
+	<script>
+		function funcao8() {
+			var texto = document.getElementById("demo44").innerHTML;
+			document.getElementById("demo44").innerHTML = texto.toLowerCase();
+		}
+	</script>
+
+	<p id="demo45"></p>
+	<script>
+		var texto1 = "Olá";
+		var texto2 = "Mundo!";
+		var texto3 = texto1.concat("", texto2);
+		document.getElementById("demo45").innerHTML = texto3;
+	</script>
+
+	<p id="demo46"></p>
+	<script>
+		var texto = "Olá Mundo";
+		document.getElementById("demo46").innerHTML = texto.charAt(2);
+	</script>
+
+	<p id="demo47"></p>
+	<script>
+		var str = "a,b,c,d,e,f";
+		var arr = str.split(",");
+		document.getElementById("demo47").innerHTML = arr[3];
+	</script>
+
+	<p id="democonst"></p>
+	<script>
+		const cars = ["Saab", " Volvo", " BMW"]; // cria um array
+		cars[0] = " Toyota"; // altera um elemento
+		cars.push(" Audi"); // adiciona um elemento
+		// mas isto daria erro --> cars=["Toyota", "Volvo", "Audi"];
+		document.getElementById("democonst").innerHTML = cars;
+	</script>
+
+</body>
+
+</html>
+
+</p>
+</body>
+
+</html>
