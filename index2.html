@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>JavaScript</title>
     <style>
         #container {
             width: 500px;
@@ -15,7 +11,6 @@
         }
 
         #animate {
-
             width: 60px;
             height: 60px;
             position: absolute;
@@ -25,17 +20,17 @@
 </head>
 
 <body>
-
     <div id="container">
-        <p>A animação aparecerá aqui.</p>
+        <p>A animação apareçá aqui.</p>
         <div id="animate"></div>
     </div>
+    <p><button onclick="mover()">Clique</button></p>
     <script>
         function mover() {
-            var elem = document.getElementById('animate'); var pos = 0;
-            var id = setInterval(frame, 5);
+            var elem = document.getElementById("animate"); var pos = 0;
+            var id = setInterval(frame, 3);
             function frame() {
-                if (pos == 500) {
+                if (pos == 440) {
                     clearInterval(id);
                 } else {
                     pos++;
@@ -45,50 +40,90 @@
             }
         }
     </script>
-    <!--BLOCO-->
-    <hr>
-
-    <p>Este exemplo mostra o método <strong>getElementById</strong></p>
-    <p>Hello World!</p>
-    <p id="demo1"></p>
-    <script>
-        var x = document.getElementsByTagName("p");
-        document.getElementById("demo1").innerHTML = "O quinto parágrafo (index 1) é: " + x[1].innerHTML;
-    </script>
-
-    <!--BLOCO-->
-    <hr>
-    <hr />
-    <p>Este exemplo encontra o elemento com o id ="main" e depois encontra todos os elementos "p" dentro de #main</p>
-    <div id="main">
-        <p>O DOM é muito util.</p>
-    </div>
-
-    <!--BLOCO-->
-    <hr>
-    <p id="demo2"></p>
-    <script>
-        var x = document.getElementById("main")
-        var y = x.getElementsByTagName("p")
-        document.getElementById("demo2").innerHTML = "O primeiro parágrafo dentro de #main é:  " + x[0].innerHTML;
-    </script>
-
-    <!--BLOCO-->
     <p id="p3">Texto a ocultar</p>
     <input type="button" value="Ocultar" onclick="document.getElementById('p3').style.visibility='hidden'">
     <input type="button" value="Mostrar" onclick="document.getElementById('p3').style.visibility='visible'">
 
-    <img src="img1.jpg" alt="" id="imagem2">
+    <br /><br />
+    <img id="imagem2" src="img1.jpg">
     <input type="button" value="Mudar" onmouseover="document.getElementById('imagem2').src = 'img2.jpg'"
         onmouseout="document.getElementById('imagem2').src = 'img1.jpg'">
-    
+
+
+    <h1 onclick="mudaTexto(this)">onclick - Clique neste texto!</h1>
     <script>
-        function displayDate() {
-            document.getElementById("demo5").innerHTML = Date();
+        function mudaTexto(id) {
+            id.innerHTML = "Cliquei!";
         }
     </script>
 
-    
+    <button onclick="displayDate()">A quantas estamos?</button>
+    <script>function displayDate() {
+            document.getElementById("demo5").innerHTML = Date();
+        }
+    </script>
+    <p id="demo5"></p>
+    <body onload="checkCookies()">
+        <p id="demo7"></p>
+        <script>
+            function checkCookies() {
+                var texto = "";
+
+                if (navigator.cookieEnabled == true) {
+                    texto = "Cookies activadas";
+                } else {
+                    texto = "Cookies desactivadas";
+                }
+                document.getElementById("demo7").innerHTML = texto;
+            }
+        </script>
+        <script>
+            function funcaoUpper() {
+                var x = document.getElementById("nome");
+                x.value = x.value.toUpperCase();
+            }
+        </script>
+        Escreva o seu nome : <input type="text" name="nome" id="nome" onchange="funcaoUpper()">
+    </body>
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color: #D94A38;width: 120px; height: 20px; padding: 40px;">Mouse Out</div>
+    <script>
+        function mOver(obj) {
+            obj.innerHTML = "Mouse Over";
+        }
+        function mOut(obj) {
+            obj.innerHTML = "Mouse Out";
+        }
+    </script>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color: #D94A38;width: 90px;height: 20px;padding: 40px;">Clique</div>
+    <script>
+        function mDown(obj) {
+            obj.style.backgroundColor = "#1ec5e5";
+            obj.innerHTML = "Liberte";
+        }
+        function mUp() {
+            obj.style.backgroundColor = "#D94A38";
+            obj.innerHTML = "Obrigado";
+        }
+        
+    </script>
+    <script>
+        function mudaImg() {
+            document.getElementById('img').src = 'img1.jpg';
+        }
+        function mudaImg1() {
+            document.getElementById('img').src = 'img2.jpg';
+        }
+    </script>
+    <img src="img1.jpg" alt="" id="img" onmousedown="mudaImg()" onmouseup="mudaImg1()">
+
+    <h1 onmouseover="style.color='red'" onmouseout="style.color='yellow'">Passe o cursor aqui</h1>
+    <script>
+        function mudaBkg(x) {
+            x.style.background = "yellow";
+        }
+    </script>
+    <p>Clique no campo de texto: <input type="text" onfocus="mudaBkg()"></p>
 </body>
 
 </html>

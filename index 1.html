@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<style>
+#container {
+width: 500px;
+height: 500px;
+position: relative;
+background: gray;
+}
+#animate {
+width: 60px;
+height: 60px;
+position: absolute;
+background: blue;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<p>A animação apareçá aqui.</p>
+<div id="animate"></div>
+</div>
+<p><button onclick="mover()">Clique</button></p>
+<script>
+function mover() {
+var elem = document.getElementById("animate"); var pos = 0;
+var id = setInterval(frame, 3);
+function frame() {
+if (pos == 440) {
+clearInterval(id);
+} else {
+pos++;
+elem.style.top = pos + 'px';
+elem.style.left = pos + 'px';
+} } }
+</script>
+</body>		
+
+<p id="p3">Texto a ocultar</p>
+<input type="button" value="Ocultar" onclick="document.getElementById('p3').style.visibility='hidden'">
+<input type="button" value="Mostrar" onclick="document.getElementById('p3').style.visibility='visible'">
+
+<br /><br />
+<img id="imagem2" src="img1.jpg">
+<input type="button" value="Mudar" onmouseover="document.getElementById('imagem2').src = 'img2.jpg'" onmouseout="document.getElementById('imagem2').src = 'img1.jpg'">
+
+
+<h1 onclick="mudaTexto(this)">onclick - Clique neste texto!</h1>
+<script>
+function mudaTexto(id) {
+	id.innerHTML = "Cliquei!";
+}
+</script>
+
+<button onclick="displayDate()">A quantas estamos?</button>
+<script>function displayDate() {
+document.getElementById("demo5").innerHTML = Date();
+}
+</script>
+<p id="demo5"></p>
+</body>
+</html>
