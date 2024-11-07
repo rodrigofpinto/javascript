@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>JavaScript</title>
+    <style>
+        #container {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background: gray;
+        }
+        #animate {
+
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            background: blue;
+        }
+    </style>
 </head>
+
 <body>
+<<<<<<< HEAD
+    <div id="container">
+        <p>A animação aparecerá aqui.</p>
+        <div id="animate"></div>
+    </div>
+    <script>
+        function mover() {
+            var elem = document.getElementById('animate'); var pos = 0;
+            var id = setInterval(frame, 5);
+            function fame() {
+                if (pos== 500 ) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+    </script>
     <!--BLOCO-->
+=======
+    <!--BLOCO--><hr>
+>>>>>>> 127c54a2a7a8972045865df70019122003f16b2a
     <p>Este exemplo mostra o método <strong>getElementById</strong></p>
     <p>Hello World!</p>
     <p id="demo1"></p>
@@ -14,17 +55,72 @@
         var x = document.getElementsByTagName("p");
         document.getElementById("demo1").innerHTML = "O quinto parágrafo (index 1) é: " + x[1].innerHTML;
     </script>
-     <!--BLOCO--><hr/>
-        <p>Este exemplo encontra o elemento com o id ="main" e depois encontra todos os elementos "p" dentro de #main</p>
+
+    <!--BLOCO--><hr>
+    <hr />
+    <p>Este exemplo encontra o elemento com o id ="main" e depois encontra todos os elementos "p" dentro de #main</p>
     <div id="main">
         <p>O DOM é muito util.</p>
     </div>
+
+    <!--BLOCO--><hr>
     <p id="demo2"></p>
     <script>
         var x = document.getElementById("main")
         var y = x.getElementsByTagName("p")
         document.getElementById("demo2").innerHTML = "O primeiro parágrafo dentro de #main é:  " + x[0].innerHTML;
     </script>
+<<<<<<< HEAD
+    <!--BLOCO-->
+    <p id="p3">Texto a ocultar</p>
+    <input type="button" value="Ocultar" onclick="document.getElementById('p3').style.visibility='hidden'">
+    <input type="button" value="Mostrar" onclick="document.getElementById('p3').style.visibility='visible'">
 
+    <img src="img1.jpg" alt="" id="imagem2">
+    <input type="button" value="Mudar" onmouseover="document.getElementById('imagem2').src = 'img2.jpg'" onmouseout="document.getElementById('imagem2').src = 'img1.jpg'">
+
+=======
+    
+    <!--BLOCO--><hr>
+    <p class="intro">Este exemplo demonstra o método <b>getElementByClassName</b></p>
+    <p class="intro">getEle,getElementsByClassName</p>
+    <p id="demo3"></p>
+    <script>
+        var x = document.getElementsByClassName("intro");
+        document.getElementById("demo3").innerHTML = "O primeiro elemento com class='intro' é: " + x[0].innerHTML;
+    </script>
+>>>>>>> 127c54a2a7a8972045865df70019122003f16b2a
+
+    <!--BLOCO--><hr>
+    <h6 class="intro1">Este é um h6 com class=intro1</h6>
+    <p class="intro1">Este exemplo demonstra o método <b>getSelectorAll</p>
+    <p id="demo4"></p>
+    <script>
+        var x = document.getSelectorAll("p.intro1");
+        document.getElementById("demo4").innerHTML = "O primeiro parágrafo com class='intro' é: " + x[0].innerHTML;
+    </script>
+    
+    <!--BLOCO--><hr>
+    <p id="p1">Este é o texto!</p>
+    <script>
+        document.getElementById("p1").innerHTML = "Este é o novo texto!";
+    </script>
+
+     <!--BLOCO--><hr>
+     <img src="img1.jpg" alt="" id="imagem1">
+     <script>
+        document.getElementById("imagem1").src = "img2.jpg";
+     </script>
+    
+     <!--BLOCO--><hr>
+     <p id="p2">Estilo alterado!</p>
+     <script>
+         document.getElementById("p2").style.color = "blue";
+     </script>
+    
+     <!--BLOCO--><hr>
+     <h1 id="id1">Título a alterar</h1>
+     <button onclick="document.getElementById('id1').style.color = 'red'">Clique aqui!</button>
 </body>
+
 </html>
