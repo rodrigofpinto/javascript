@@ -1,3 +1,4 @@
+mostrarMensagem();
 //Exercicio 1
 function mostrarMensagem() {
     document.getElementById("mensagem").innerText =
@@ -25,6 +26,10 @@ console.log("Quarto nome:", nomes[3]);
 
 //Exercicio 4
 // Demonstração de um objeto com frutas, cores e preços
+const pera = {
+    cor: "vermelho",
+    preco: 1.20
+}
 const frutas = {
     maca: { cor: "vermelho", preco: 1.2 },
     banana: { cor: "amarelo", preco: 0.8 },

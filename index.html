@@ -12,12 +12,18 @@
 </head>
 
 <body>
+
+
 	<!--BLOCO-->
+	<!--CHAMA FUNÇÃO E TROCA PARAGRAFO-->
 	<hr>
 	<p id="demo1">Parágrafo.</p>
 	<button type="button" onclick="funcao1()">Clique</button>
+
+
 	<!--BLOCO-->
 	<hr>
+	<!--CHAMA FUNÇÃO E TROCA O CONTEUDO PARAGRAFO-->
 	<h2>JavaScript no body</h2>
 	<p id="demo2">Outro parágrafo.</p>
 	<button type="button" onclick="funcao2()">Clique</button>
@@ -26,25 +32,37 @@
 			document.getElementById("demo2").innerHTML = " Outro parágrafo mudado.";
 		}
 	</script>
+
+
 	<!--BLOCO-->
+	<!--CHAMA FUNÇÃO QUE ESTÁ NO OUTRO ARQUIVO E TROCA PARAGRAFO-->
 	<hr>
 	<h2>JavaScript externo</h2>
 	<p id="demo3">Mais um parágrafo.</p>
 	<button type="button" onclick="funcao3()">Clique</button>
 	<p>(funcao3 está no ficheiro meuScript.js)</p>
 	<script src="meuScript.js"></script>
+
+
 	<!--BLOCO-->
+	<!--TROCA O CONTEUDO PELA SOMA DOS NUMEROS-->
 	<hr>
 	<p id="demo4"></p>
 	<script>
 		document.getElementById("demo4").innerHTML = 5 + 6;
 	</script>
+
+
 	<!--BLOCO-->
+	<!--COLOCA O VALOR NO FLUXO DO HTML-->
 	<hr>
 	<script>
 		document.write(7 + 6); 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--VARIOS TIPOS DE MANEIRA DE MOSTRAR INFORMAÇÃO-->
 	<hr>
 	<br /><br /> <!-- Quebra de linha para espaçamento -->
 	<button onclick="document.write(5 + 9)">document.write</button>
@@ -52,7 +70,10 @@
 	<button onclick="window.alert(3 + 6)">window.alert</button>
 	<br /><br />
 	<button onclick="console.log(3 + 6)">console.log</button>
+
+
 	<!--BLOCO-->
+	<!--SOMA OS VALORES E APRESENTA-OS -->
 	<hr>
 	<p id="demo5"></p>
 	<script>
@@ -67,36 +88,50 @@
 		Comentário de várias linhas
 		*/
 	</script>
+
+
 	<!--BLOCO-->
+	<!--DECLARA AS VARIAVEIS DE DIVERSOS TIPOS, E DECLARA UM OBJETO-->
 	<hr>
 	<script>
-		var legth = 16;
-		var tlm = "96679623";
-		var lastName = "Johnson";
-		var x = { firstName: "John", lastName: "Doe" }; 
+		var legth = 16; //INTEIRO
+		var tlm = "96679623"; //STRING
+		var lastName = "Johnson"; //STRING
+		var x = { firstName: "John", lastName: "Doe" };  //OBJETO
 	</script>
+
+
 	<!--BLOCO-->
+	<!--CONCATNA UM INTEIRO COM UMA STRING-->
 	<hr>
 	<p id="demo6"></p>
 	<script>
 		var x = 16 + " Joaquim";
 		document.getElementById("demo6").innerHTML = x; 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--SOMA AS DUAS PRIMEIRAS STRING E CONCATNA O RESTO-->
 	<hr>
 	<p id="demo7"></p>
 	<script>
 		var x = 10 + 5 + " Bernardo";
 		document.getElementById("demo7").innerHTML = x;
 	</script>
+
+
 	<!--BLOCO-->
+	<!--CONCATNA TODOS-->
 	<hr>
 	<p id="demo8"></p>
 	<script>
 		var x = "Bernardo " + 10 + 5;
 		document.getElementById("demo8").innerHTML = x;
 	</script>
-	<!--BLOCO-->
+
+
+	<!--DECLARAÇÃO DE VARIAVEIS, O ULTIMO É QUE TOMA O VALOR-->
 	<hr>
 	<p id="demo9"></p>
 	<script>
@@ -105,7 +140,10 @@
 		x = "Joana";
 		document.getElementById("demo9").innerHTML = x; 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--CONCATNA DUAS VARIAVEIS-->
 	<hr>
 	<p id="demo10"></p>
 	<script>
@@ -113,7 +151,10 @@
 		var aluno2 = 'Maria Carrapatoso';
 		document.getElementById("demo10").innerHTML = aluno1 + "<br />" + aluno2; 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--CONCATNA AS VARIAVEIS-->
 	<hr>
 	<p id="demo11"></p>
 	<script>
@@ -122,7 +163,10 @@
 		var frase3 = 'Ele é "esperto"';
 		document.getElementById("demo11").innerHTML = frase1 + "<br />" + frase2 + "<br />" + frase3; 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--CONCATNA OS VALORES-->
 	<hr>
 	<p id="demo12"></p>
 	<script>
@@ -131,7 +175,9 @@
 		var x3 = 3.14;
 		document.getElementById("demo12").innerHTML = x1 + "<br />" + x2 + "<br />" + x3;
 	</script>
-	<!--BLOCO-->
+
+
+	<!--APRESENTA OS VALORES COM OS DECIMAIS-->
 	<hr>
 	<p id="demo13"></p>
 	<script>
@@ -139,7 +185,10 @@
 		var z = 123e-5;
 		document.getElementById("demo13").innerHTML = y + "<br />" + z;
 	</script>
+
+
 	<!--BLOCO-->
+	<!--CONDIÇOES, TOMA O VALOR DE VERDADEIRO OU DE FALSO-->
 	<hr>
 	<p id="demo14"></p>
 	<script>
@@ -148,35 +197,50 @@
 		var z = 6;
 		document.getElementById("demo14").innerHTML = (x == y) + "<br />" + (x == z); 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--ARRAY-->
 	<hr>
 	<p id="demo15"></p>
 	<script>
-		var alunos = ["Francisco", "Berta", "Josefa"];
-		document.getElementById("demo15").innerHTML = alunos[0]; 
+		var alunos = ["Francisco", "Berta", "Josefa"]; //ARRAY
+		document.getElementById("demo15").innerHTML = alunos[0]; //PEGA NO PRIMEIRO ELEMENTO DA ARRAY
 	</script>
+
+
 	<!--BLOCO-->
+	<!--OBJETO-->
 	<hr>
 	<p id="demo16"></p>
 	<script>
-		var aluno = { nome: "Joaquim", apelido: "Barbosa", idade: 17 };
-		document.getElementById("demo16").innerHTML = "O " + aluno.nome + " " + aluno.apelido + " tem " + aluno.idade + " anos de idade."; 
+		var aluno = { nome: "Joaquim", apelido: "Barbosa", idade: 17 }; //CRIA UM OBJETO
+		document.getElementById("demo16").innerHTML = "O " + aluno.nome + " " + aluno.apelido + " tem " + aluno.idade + " anos de idade."; //PEGA NOS ELMENTOS SOLICITADOS AO OBJETO 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--EXIBIR TIPO DE DADOS-->
 	<hr>
 	<p id="demo17"></p>
 	<script>
 		var x = 5; // Número
 		document.getElementById("demo17").innerHTML = typeof x + "<br />" + typeof "Fernando"; // Exibe os tipos de dados de x e de uma string no parágrafo com id "demo17"
 	</script>
+
+
 	<!--BLOCO-->
+	<!--COMO A VARIAVEL APENAS TÁ CRIADA E NAO DEFINIDA O SEU VALOR ELE RETORNA UNDEFINED-->
 	<hr>
 	<p id="demo18"></p>
 	<script>
 		var veiculo;
 		document.getElementById("demo18").innerHTML = veiculo + "<br />" + typeof veiculo;
 	</script>
+
+
 	<!--BLOCO-->
+	<!--Aqui como o veiculo é atribuido como undefined ele absorve esse valor-->
 	<hr>
 	<p id="demo19"></p>
 	<script>
@@ -184,21 +248,30 @@
 		veiculo = undefined;
 		document.getElementById("demo19").innerHTML = veiculo + "<br />" + typeof veiculo;
 	</script>
+
+
 	<!--BLOCO-->
+	<!--AQUI MOSTRA QUE É STRING POR CAUSA DAS ""-->
 	<hr>
 	<p id="demo20"></p>
 	<script>
 		var veiculo = "";
 		document.getElementById("demo20").innerHTML = "O valor é: " + veiculo + "<br />" + "O tipo é: " + typeof veiculo; 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--AQUI MOSTRA O TIPO DE VARIAVEL, OBJETO-->
 	<hr>
 	<p id="demo21"></p>
 	<script>
 		var pessoa = { nome: "José", apelido: "Sá" };
 		document.getElementById("demo21").innerHTML = typeof pessoa; 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--CHAMA UMA FUNÇÃO E MULTIPLICA OS VALORES NELA ATRIBUIDOS(P1=4, P2= 3)-->
 	<hr>
 	<p id="demo22"></p>
 	<script>
@@ -207,7 +280,10 @@
 		}
 		document.getElementById("demo22").innerHTML = funcao4(4, 3); 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--A MESMA LOGICA DA DE CIMA-->
 	<hr>
 	<p id="demo23"></p>
 	<script>
@@ -217,7 +293,10 @@
 		var x = funcao5(6, 2)
 		document.getElementById("demo23").innerHTML = x;
 	</script>
+
+
 	<!--BLOCO-->
+	<!--CALCULA OS FAHRENHEIT-->
 	<hr>
 	<p id="demo24"></p>
 	<script>
@@ -226,7 +305,10 @@
 		}
 		document.getElementById("demo24").innerHTML = toCelsius(77); 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--CALCULA OS CELSIOS-->
 	<hr>
 	<p id="demo25"></p>
 	<script>
@@ -235,7 +317,10 @@
 		}
 		document.getElementById("demo25").innerHTML = toCelsius + " " + toCelsius(77); 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--LOGICA DAS DE CIMA, COLETA O VALOR 77 E REALIZA OS CALCULOS-->
 	<hr>
 	<p id="demo26"></p>
 	<script>
@@ -244,19 +329,23 @@
 		}
 		document.getElementById("demo25").innerHTML = "A temperatura é de " + toCelsius(77); 
 	</script>
+
+
 	<!--BLOCO-->
+	<!--OBJETO-->
 	<hr>
 	<p id="demo27"></p>
 	<script>
 		var pessoa = {
 			nome: "Joao", apelido: "Carvalho", nomeCompleto: function () {
-				return this.nome + " " + this.apelido;
+				return this.nome + " " + this.apelido; //PEGA NO pessoa.nome e no pessoa.apelido
 			}
 		};
 		document.getElementById("demo27").innerHTML = pessoa.nomeCompleto();
 	</script>
-	<!--BLOCO - OBJETO -->
-	
+
+	<!--BLOCO-->
+	<!--IGUAL AO DE CIMA-->
 	<hr>
 	<p id="demo28"></p>
 	<script>
@@ -267,6 +356,8 @@
 		};
 		document.getElementById("demo28").innerHTML = pessoa.nomeCompleto();
 	</script>
+
+
 	<!--BLOCO-->
 	<hr>
 	<p id="demo29"></p>
@@ -276,13 +367,18 @@
 		}
 		document.getElementById("demo29").innerHTML = "Consigo aceder a " + carro;
 	</script>
+
+
 	<!--BLOCO-->
+
 	<hr>
 	<p id="demo30"></p>
 	<script>
-		var carro = "Renault";
+		var carro = "Renault"; 
 		document.getElementById("demo30").innerHTML = "Eu consigo aceder a " + window.carro;
 	</script>
+
+
 	<!--BLOCO-->
 	<hr>
 	<p id="demolet"></p>
@@ -293,6 +389,9 @@
 		}
 		document.getElementById("demolet").innerHTML = x;
 	</script>
+
+	<!--BLOCO-->
+	<!--DATA E HORA-->
 	<button onclick="document.getElementById('demo31').innerHTML = Date()"> Qual a data e hora? </button>
 	<p id="demo31"></p>
 	<button onclick="this.innerHTML = Date()"> Qual a data e hora? </button>
@@ -306,24 +405,32 @@
 	</script>
 	<p id="demo32"></p>
 
+	<!--MOUSEHOVER MOUSEOVER-->
 	<button onmouseover="document.getElementById('demo33').innerHTML = Date()"> Qual a data e hora? </button>
 	<p id="demo33"></p>
 	<button onmouseout="this.innerHTML = Date()"> Qual a data e hora? </button>
 
+	<!--COMPRIMENTO STRING-->
 	<p id="demo34"></p>
 	<script>
 		var texto = "A minha avó joga melhor do que a tua!";
 		document.getElementById("demo34").innerHTML = "O comprimento da string é de: " + texto.length + "caracteres";
 	</script>
+
+
 	<!--BLOCO-->
+	<!--LOCALIZAR PALAVRA-->
 	<hr>
 	<p id="demo35"></p>
 	<script>
 		var texto = "Descobrir onde está, pela primeira vez, a palavra 'onde'.";
-		var pos = texto.indexOf("onde");
+		var pos = texto.indexOf("onde"); //LOCALIZA
 		document.getElementById("demo35").innerHTML = "A palavra 'onde' encontra-se pela primeira vez na posição: " + pos;
 	</script>
+
+
 	<!--BLOCO-->
+	<!--LOCALIZA A ULTIMA VEZ QUE A STRING APARECE-->
 	<hr>
 	<p id="demo36"></p>
 	<script>
@@ -331,7 +438,10 @@
 		var pos = texto.lastIndexOf("onde");
 		document.getElementById("demo36").innerHTML = "A palavra 'onde', encontra-se pela última vez na posição: " + pos;
 	</script>
+
+
 	<!--BLOCO-->
+	<!--LOCALIZA ONDE A PALAVRA APARECE PELA PRIMEIRA VEZ DEPOIS DA POS 15-->
 	<hr>
 	<p id="demo37"></p>
 	<script>
@@ -339,7 +449,10 @@
 		var pos = texto.indexOf("onde", 15);
 		document.getElementById("demo37").innerHTML = "A palavra 'onde', encontra-se pela primeira vez, depois da posição 15, na posição: " + pos;
 	</script>
+
+
 	<!--BLOCO-->
+	<!--ENCONTRA A POSIÇÃO DA PALAVRA-->
 	<hr>
 	<p id="demo38"></p>
 	<script>
@@ -347,30 +460,38 @@
 		var pos = texto.search("está");
 		document.getElementById("demo38").innerHTML = "A palavra 'está', encontra-se na posição: " + pos;
 	</script>
+
+
 	<!--BLOCO-->
+	<!--LOCALIZA ENTRE DOIS PONTOS-->
 	<hr>
 	<p id="demo39"></p>
 	<script>
 		var texto = "Cabeça, tronco, membros";
-		var extrai = texto.slice(8, 14);
+		var extrai = texto.slice(8, 14);// Retorna a substring do índice 8 até 14 (não inclusivo)
 		document.getElementById("demo39").innerHTML = "A palavra que está entre as posições 8 e 14 é: " + extrai;
 		// parametro negativo = trabalhar com o fim da string
 	</script>
+
+
+	<!--BLOCO-->
 	<!--BLOCO-->
 	<hr>
 	<p id="demo40"></p>
 	<script>
 		var texto = "Cabeça, tronco, membros";
-		var extrai = texto.substring(8);
+		var extrai = texto.substring(8);// Retorna a substring a partir do índice 8 até o final
 		document.getElementById("demo40").innerHTML = "A palavra que está entre as posições 0 e 6 é: " + extrai;
 		// parametro negativo = trabalhar com o fim da string
 	</script>
+
+
 	<!--BLOCO-->
 	<hr>
 	<p id="demo41"></p>
 	<script>
 		var texto = "Um, dois, três";
-		var extrai = texto.substr(4, 4);
+		var extrai = texto.substr(4, 4);// A partir do índice 4, extraímos 4 caracteres
 		document.getElementById("demo41").innerHTML = "A palavra que se encontra na quarta posição e anda mais 4 posicoes é: " + extrai;
 		// verifica os caracteres que começam na quarta posicao e seguem mais 4 posicoes
 	</script>
@@ -381,21 +502,28 @@
 
 		function funcao6() {
 			var texto = document.getElementById("demo42").innerHTML;
-			var subst = texto.replace("Substitui", "Substituída");
+			var subst = texto.replace("Substitui", "Substituída"); //substituir
 			document.getElementById("demo42").innerHTML = subst;
 		}
 	</script>
+
+
 	<!--BLOCO-->
+	<!--MAIUSCULAS-->
+
 	<hr>
 	<button onclick="funcao7()"> Maiúsculas </button>
 	<p id="demo43"> Converter para maiúsculas</p>
 	<script>
 		function funcao7() {
 			var texto = document.getElementById("demo43").innerHTML;
-			document.getElementById("demo43").innerHTML = texto.toUpperCase();
+			document.getElementById("demo43").innerHTML = texto.toUpperCase(); //MAIUSCULAS
 		}
 	</script>
+
+
 	<!--BLOCO-->
+	<!--MINÚSCULAS-->
 	<hr>
 	<button onclick="funcao8()"> Minúsculas </button>
 	<p id="demo44"> CONVERTER PARA MINÚSCULAS </p>
@@ -405,31 +533,41 @@
 			document.getElementById("demo44").innerHTML = texto.toLowerCase();
 		}
 	</script>
+
+
 	<!--BLOCO-->
 	<hr>
 	<p id="demo45"></p>
 	<script>
 		var texto1 = "Olá";
 		var texto2 = "Mundo!";
-		var texto3 = texto1.concat("", texto2);
+		var texto3 = texto1.concat("", texto2); //CONCATNA AS DUAS STRINGS
 		document.getElementById("demo45").innerHTML = texto3;
 	</script>
+
+
 	<!--BLOCO-->
 	<hr>
 	<p id="demo46"></p>
 	<script>
 		var texto = "Olá Mundo";
-		document.getElementById("demo46").innerHTML = texto.charAt(2);
+		document.getElementById("demo46").innerHTML = texto.charAt(2);//pega o caractere na posição 2 da string texto
 	</script>
+
+
+	<!--BLOCO-->
 	<!--BLOCO-->
 	<hr>
 	<p id="demo47"></p>
 	<script>
 		var str = "a,b,c,d,e,f";
-		var arr = str.split(",");
-		document.getElementById("demo47").innerHTML = arr[3];
+		var arr = str.split(",");// divide a string str em partes, onde cada vírgula é o delimitador.
+		document.getElementById("demo47").innerHTML = arr[3]; //pega no 4 elemento da array
 	</script>
+
+
 	<!--BLOCO-->
+	<!--ARRAY-->
 	<hr>
 	<p id="democonst"></p>
 	<script>
