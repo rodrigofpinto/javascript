@@ -1,11 +1,12 @@
 //Exercicio 1
 function mostrarMensagem() {
     document.getElementById("mensagem").innerText =
-        "O meu nome é Nome Apelido e este teste está a ser realizado em ";
+        "O meu nome é Rodrigo Pinto e este teste está a ser realizado em ";
 }
 function mostrarData() {
     const dataAtual = new Date().toLocaleDateString();
-    document.getElementById("mensagem").innerText += " " + dataAtual;
+    const horas = new Date().getHours();
+    document.getElementById("mensagem").innerText += " " + dataAtual + " ás " + horas + "h.";
 }
 
 //Exercicio 2
@@ -29,6 +30,7 @@ const frutas = {
     banana: { cor: "amarelo", preco: 0.8 },
     laranja: { cor: "laranja", preco: 1.1 }
 };
+//document.getElementById("demo28").innerHTML = JSON.stringify(frutas, null, 2);
 console.log("Frutas:", frutas);
 
 //Exercicio 5
